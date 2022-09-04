@@ -2,7 +2,6 @@ import React from "react";
 import {
   FaFacebook,
   FaInstagram,
-  FaPinterest,
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
@@ -17,22 +16,18 @@ const Footer = () => {
             <FaFacebook className="icon" />
             <FaInstagram className="icon" />
             <FaYoutube className="icon" />
-            <FaPinterest className="icon" />
             <FaTwitter className="icon" />
           </div>
         </div>
         <div className="flex justify-between">
           <ul className="lg:flex">
             <li>History</li>
-            <li>Advertising</li>
-            <li>Groups</li>
             <li>Reviews</li>
             <li>Map</li>
           </ul>
           <ul className="text-right lg:flex">
           <li>Home</li>
           <li>Locations</li>
-          <li>Acomodations</li>
           <li>Reviews</li>
           </ul>
         </div>

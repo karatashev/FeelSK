@@ -29,7 +29,6 @@ const Navbar = () => {
       <ul className="hidden md:flex">
         <li>Home</li>
         <li>Locations</li>
-        <li>Acomodations</li>
         <li>Reviews</li>
       </ul>
       <div className="hidden md:flex">
@@ -61,19 +60,18 @@ const Navbar = () => {
           </h1>
           <li className="border-b">Home</li>
           <li className="border-b">Locations</li>
-          <li className="border-b">Acomodations</li>
           <li className="border-b">Reviews</li>
 
           <div className="flex flex-col">
-            <button className="my-6">Search</button>
-            <button>Account</button>
+            <button className="my-6 hover:text-black">Search</button>
+            <button className="hover:text-black">Account</button>
           </div>
           <div className="flex justify-between my-6">
-            <FaFacebook className="icon" />
-            <FaInstagram className="icon" />
-            <FaYoutube className="icon" />
-            <FaPinterest className="icon" />
-            <FaTwitter className="icon" />
+            <FaFacebook className="icon hover:text-black" />
+            <FaInstagram className="icon hover:text-black" />
+            <FaYoutube className="icon hover:text-black" />
+            <FaPinterest className="icon hover:text-black" />
+            <FaTwitter className="icon hover:text-black" />
           </div>
         </ul>
       </div>

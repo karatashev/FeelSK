@@ -2,12 +2,12 @@ import React from "react";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { MdOutlineTravelExplore } from "react-icons/md";
 
-const Search = () => {
+const Booking = () => {
   return (
     <div className="max-w-[1240px] mx-auto grid lg:grid-cols-3 gap-4 px-4 py-16">
       <div className="lg:col-span-2 flex flex-col justify-evenly">
         <div>
-          <h2>BOOK THE BEST TOURS FOR YOU AND YOUR GROUP</h2>
+          <h2>Experience our city tours</h2>
           <p className="py-4">
           With all of its perfections and flaws, Skopje is a city like no other. We grew up here, we live here, we work here.. All of our memories with the people we care the most about are created on the streets of Skopje. We are proud of the city with inexhaustible energy. The city that almost never sleeps. The wonderful squares, the biggest monument on the Balkan Peninsula, the City Park, Vodno and Matka, the Vrelo caves, the way Vardar cuts it in half, the Millenium cross, the Old town bazaar, the Kale fortress .. all of these represent a certain period and tell a different story of the capital city of the land of the sun.
           </p>
@@ -19,8 +19,8 @@ const Search = () => {
               <RiCustomerService2Fill size={50}/>
             </button>
             <div>
-              <h3 className="py-2">LEADING SERVICE</h3>
-              <p className="py-1">ALL-INCLUSIVE-COMPANY FOR 20YEARS IN-A-ROW</p>
+              <h3 className="py-2">CONTACT US</h3>
+              <p className="py-1 px-2">OFFICIAL TOUR GUIDES</p>
             </div>
           </div>
           <div className="flex flex-col lg:flex-row items-center text-center">
@@ -28,8 +28,8 @@ const Search = () => {
               <MdOutlineTravelExplore size={50}/>
             </button>
             <div>
-              <h3 className="py-2">LEADING SERVICE</h3>
-              <p className="py-1">ALL-INCLUSIVE-COMPANY FOR 20YEARS IN-A-ROW</p>
+              <h3 className="py-2 px-4">LEADING SERVICE</h3>
+              <p className="py-1 px-2">CHECK FOR TOURS</p>
             </div>
           </div>
         </div>
@@ -65,4 +65,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default Booking;

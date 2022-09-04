@@ -1,12 +1,12 @@
 import React from "react";
 
-const GridImageCard = ({bg, text}) => {
+const GridImageCard = ({imgSrc, title, desc, getData}) => {
   return (
-    <div className="relative">
-      <img className="w-full h-full object-cover" src={bg} alt="/" />
-      <div className="bg-gray-900/30 absolute top-0 left-0 w-full h-full">
+    <div onClick={() => getData(imgSrc, title, desc)} className="relative mx-auto my-3">
+      <img className="w-[365px] h-[365px] object-fit" src={imgSrc} alt="/" />
+      <div className=" absolute top-0 left-0 w-full h-full">
         <p className="left-4 bottom-4 text-2xl font-bold text-white absolute">
-          {text}
+          {title}
         </p>
       </div>
     </div>
@@ -14,3 +14,6 @@ const GridImageCard = ({bg, text}) => {
 };
 
 export default GridImageCard;
+
+
+

@@ -1,22 +1,10 @@
 import React from "react";
-import Carousel from "./components/Carousel";
-import Footer from "./components/Footer";
-import Grid from "./components/Grid";
-import Hero from "./components/Hero";
-import Locations from "./components/Locations";
-import Navbar from "./components/Navbar";
-import Search from "./components/Search";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Hero />
-      <Locations />
-      <Search />
-      <Grid />
-      <Carousel />
-      <Footer />
+      <Home />
     </div>
   );
 }
