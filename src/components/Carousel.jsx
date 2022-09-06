@@ -72,7 +72,7 @@ const Carousel = () => {
       {showTopBtn && (
         <BsArrowUpSquareFill
           size={70}
-          className="fixed p-2 text-xl bottom-2 right-10 text-center bg-red text-red-600"
+          className="fixed p-2 text-xl bottom-2 right-10 text-center bg-red text-red-600 cursor-pointer"
           onClick={goToTop}
         />
       )}

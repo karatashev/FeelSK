@@ -1,15 +1,9 @@
 import React, { useState } from "react";
-import { BsPerson } from "react-icons/bs";
-import { BiSearch } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaPinterest,
-  FaTwitter,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -22,18 +16,47 @@ const Navbar = () => {
   return (
     <div className="flex w-full justify-between items-center h-20 px-4 absolute z-10 text-white">
       <div>
-        <h1 onClick={handleNav} className={logo ? "hidden" : "block"}>
+        <h1 className={logo ? "hidden" : "block"}>
           Feel<span className="text-red-600">SK</span>
         </h1>
       </div>
       <ul className="hidden md:flex">
-        <li>Home</li>
-        <li>Locations</li>
-        <li>Reviews</li>
+        <Link
+          className="p-4 cursor-pointer hover:text-red-600"
+          to="locations"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}
+        >
+          Locations
+        </Link>
+
+        <NavLink to="/reviews" className="p-4 hover:text-red-600 cursor-pointer">Reviews</NavLink>
+
+        <Link
+          className="p-4 cursor-pointer hover:text-red-600"
+          to="social"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}
+        >
+          Social
+        </Link>
+
       </ul>
       <div className="hidden md:flex">
-        <BiSearch className="mr-2" />
-        <BsPerson />
+        <Link
+          className="bg-transparent p-3 border text-white border-white rounded-md list-none hover:bg-red-600 cursor-pointer"
+          to="booking"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}
+        >
+          Book a tour
+        </Link>
       </div>
 
       {/* Mobile hamburger menu */}
@@ -64,13 +87,12 @@ const Navbar = () => {
 
           <div className="flex flex-col">
             <button className="my-6 hover:text-black">Search</button>
-            <button className="hover:text-black">Account</button>
+            <button className="hover:text-black">Book a tour</button>
           </div>
           <div className="flex justify-between my-6">
             <FaFacebook className="icon hover:text-black" />
             <FaInstagram className="icon hover:text-black" />
             <FaYoutube className="icon hover:text-black" />
-            <FaPinterest className="icon hover:text-black" />
             <FaTwitter className="icon hover:text-black" />
           </div>
         </ul>

@@ -40,17 +40,17 @@ const SearchBar = ({ placeholder, data }) => {
         </div>
       </form>
       {filteredData.length !== 0 && (
-        <div className="mt-2 mx-auto w-[300px] lg:w-[600px] h-[200px] bg-gray-100/90 overflow-hidden overflow-y-auto rounded-md">
+        <div className="mt-2 mx-auto w-[300px] lg:w-[600px] h-[150px] bg-transparent overflow-hidden overflow-y-auto rounded-md border">
           {filteredData.map((value, key) => {
             return (
               <a
-                className="w-full h-[50px] flex items-center text-black decoration-none cursor-pointer hover:bg-zinc-400"
+                className="w-full h-[50px] flex items-center text-gray-100/90 decoration-none cursor-pointer hover:bg-gray-100/90 hover:text-black"
                 href={value.link}
                 target="_blank"
                 rel="noreferrer"
                 key={value.id}
               >
-                <p className="ml-2">{value.title}</p>
+                <p className="ml-2 hover:text-black">{value.title}</p>
               </a>
             );
           })}
