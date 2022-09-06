@@ -1,8 +1,24 @@
 import React from "react";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { MdOutlineTravelExplore } from "react-icons/md";
+import { useState } from "react";
 
 const Booking = () => {
+  const [tour, setTour] = useState();
+  const [date, setDate] = useState()
+  const [time, setTime] = useState();
+
+
+  const handleBooking = (e) => {
+    e.preventDefault()
+    alert(`You have booked Tour: ${tour} from ${time}h on ${date}`)
+    setTour('')
+    setDate('')
+    setTime('')
+  }
+
+
+
   return (
     <div id="booking" className="max-w-[1240px] mx-auto grid lg:grid-cols-3 gap-4 px-4 py-16">
       <div className="lg:col-span-2 flex flex-col justify-evenly">
@@ -35,30 +51,53 @@ const Booking = () => {
         </div>
       </div>
       <div>
-        <div className="border text-center">
+        <div className="border text-center bg-gray-800 text-white">
           <p className="pt-2">Get and additional 10 % off</p>
           <p className="py-4">ON THE FIRST TOUR</p>
-          <p className="bg-gray-800 text-gray-200 py-2">---</p>
+          {/* <p className="bg-gray-800 text-gray-200 py-2">Select below</p> */}
         </div>
         <form className="w-full">
+
+
+          {/* Select Tour */}
           <div className="flex flex-col my-2">
-            <label>Destination</label>
-            <select className="border rounded-md p-2">
+            <label>Select tour</label>
+            <select onChange={(e) => setTour(e.target.value)} value={tour} className="border rounded-md p-2">
+            {console.log(tour)}
+              <option>City Tour</option>
               <option>Matka</option>
               <option>Vodno</option>
               <option>Skopska Crna Gora</option>
               <option>Park</option>
             </select>
           </div>
+
+          {/* Date picker*/}
           <div className="flex flex-col my-4">
-            <label>Check-in</label>
-            <input className="border rounded-md p-2" type="date"/>
+            <label>Date</label>
+            <input onChange={(e) => setDate(e.target.value)} className="border rounded-md p-2" type="date" value={date}/>
+            {console.log(date)}
           </div>
+
+          {/* Time */}
           <div className="flex flex-col my-2">
-            <label>Check-out</label>
-            <input className="border rounded-md p-2" type="date"/>
+            <label>Time</label>
+            <select onChange={(e) => setTime(e.target.value)} value={time} className="border rounded-md p-2">
+              {console.log(time)}
+              <option>07:00-08:00</option>
+              <option>08:00-09:00</option>
+              <option>09:00-10:00</option>
+              <option>10:00-11:00</option>
+              <option>11:00-12:00</option>
+              <option>12:00-13:00</option>
+              <option>13:00-14:00</option>
+              <option>19:00-20:00</option>
+              <option>20:00-21:00</option>
+              <option>21:00-22:00</option>
+              <option>22:00-23:00</option>
+            </select>
           </div>
-          <button className="w-full my-4 rates">Book tour</button>
+          <button onClick={handleBooking} type="submit" className="w-full my-4 rates">Book tour</button>
         </form>
       </div>
     </div>

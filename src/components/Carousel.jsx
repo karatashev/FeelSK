@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   BsArrowLeftSquareFill,
   BsArrowRightSquareFill,
-  BsArrowUpSquareFill,
 } from "react-icons/bs";
 import carouselData from "./carouselData";
 
 const Carousel = () => {
-  const [showTopBtn, setShowTopBtn] = useState(false);
   const [slide, setSlide] = useState(0);
   const length = carouselData.length;
 
@@ -18,22 +16,7 @@ const Carousel = () => {
     setSlide(slide === 0 ? length - 1 : slide - 1);
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        setShowTopBtn(true);
-      } else {
-        setShowTopBtn(false);
-      }
-    });
-  }, []);
 
-  const goToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <div className="relative">
@@ -68,14 +51,6 @@ const Carousel = () => {
           className="absolute top-[50%] text-3xl sm:text-5xl sm:text-black text-white cursor-pointer right-8 lg:right-72 sm:right-2"
         />
       </div>
-
-      {showTopBtn && (
-        <BsArrowUpSquareFill
-          size={70}
-          className="fixed p-2 text-xl bottom-2 right-10 text-center bg-red text-red-600 cursor-pointer"
-          onClick={goToTop}
-        />
-      )}
     </div>
   );
 };
