@@ -2,20 +2,33 @@ import React from "react";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { MdOutlineTravelExplore } from "react-icons/md";
 import { useState } from "react";
+import { alert } from 'react-custom-alert';
+import '../../src/index.css'; // import css file from root.
 
 const Booking = () => {
   const [tour, setTour] = useState();
-  const [date, setDate] = useState()
+  const [date, setDate] = useState()  
   const [time, setTime] = useState();
-
 
   const handleBooking = (e) => {
     e.preventDefault()
-    alert(`You have booked Tour: ${tour} from ${time}h on ${date}`)
+    alertSuccess()
     setTour('')
     setDate('')
     setTime('')
   }
+
+// to disable past dates
+  const disablePastDate = () => {
+    const today = new Date();
+    const dd = String(today.getDate() + 1).padStart(2, "0");
+    const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+    const yyyy = today.getFullYear();
+    return dd + "-" + mm + "-" + yyyy;
+};
+
+
+  const alertSuccess = () => alert({ message: `Booked! ${tour} from ${time}h on ${date}`, type: 'success' });
 
 
 
@@ -64,18 +77,19 @@ const Booking = () => {
             <label>Select tour</label>
             <select onChange={(e) => setTour(e.target.value)} value={tour} className="border rounded-md p-2">
             {console.log(tour)}
-              <option>City Tour</option>
-              <option>Matka</option>
-              <option>Vodno</option>
+              <option>Select... </option>
+              <option>City Center Tour</option>
+              <option>Canyon Matka</option>
+              <option>Mount Vodno</option>
               <option>Skopska Crna Gora</option>
-              <option>Park</option>
+              <option>City Park</option>
             </select>
           </div>
 
           {/* Date picker*/}
           <div className="flex flex-col my-4">
             <label>Date</label>
-            <input onChange={(e) => setDate(e.target.value)} className="border rounded-md p-2" type="date" value={date}/>
+            <input onChange={(e) => setDate(e.target.value)} className="border rounded-md p-2" type="date" value={date} min={disablePastDate()}/>
             {console.log(date)}
           </div>
 
@@ -84,6 +98,7 @@ const Booking = () => {
             <label>Time</label>
             <select onChange={(e) => setTime(e.target.value)} value={time} className="border rounded-md p-2">
               {console.log(time)}
+              <option>Select...</option>
               <option>07:00-08:00</option>
               <option>08:00-09:00</option>
               <option>09:00-10:00</option>
@@ -97,7 +112,13 @@ const Booking = () => {
               <option>22:00-23:00</option>
             </select>
           </div>
-          <button onClick={handleBooking} type="submit" className="w-full my-4 rates">Book tour</button>
+
+
+          {/* Phone number */}
+          {/* <label for="phone">Enter your phone number:</label>
+          <input onChange={(e) => setPhoneNumber(e.target.value)} className="border rounded-md p-2" type="tel" value={phoneNumber} id="phone" name="phone" placeholder="00-389-7xxxxxxx" pattern="[0-9]{2}-[0-9]{3}-[0-9]{8}"/> */}
+
+          <button onClick={handleBooking}  type="submit" className="w-full my-4 rates">Book tour</button>
         </form>
       </div>
     </div>

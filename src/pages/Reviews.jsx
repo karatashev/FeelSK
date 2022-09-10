@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Comments from "../components/Comments";
 
 const Reviews = () => {
-  return (
-    <div className='h-screen bg-slate-400 text-black'>Reviews</div>
-  )
-}
+  return <div className="bg-white text-black">
 
-export default Reviews
+
+    <Comments currentUserId="1"/>
+    
+    </div>;
+
+};
+
+export default Reviews;

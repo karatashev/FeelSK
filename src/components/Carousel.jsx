@@ -20,13 +20,13 @@ const Carousel = () => {
 
   return (
     <div className="relative">
-      <h1 className="text-center text-5xl">
+      <h1 className="text-center pt-12 text-5xl">
         Feel the <span className="text-red-600">CITY</span>
       </h1>
       <h1 className="text-center text-5xl py-2">
         Feel the <span className="text-red-600">PEOPLE</span>
       </h1>
-      <div className="max-w-[1240px] mx-auto px-4 py-16 relative flex justify-center items-center">
+      <div className="max-w-[1240px] mx-auto px-4 py-12 relative flex justify-center items-center">
         <BsArrowLeftSquareFill
           onClick={prevSlide}
           className="absolute top-[50%] text-3xl sm:text-5xl sm:text-black  text-white cursor-pointer left-8 lg:left-72 sm:left-2"

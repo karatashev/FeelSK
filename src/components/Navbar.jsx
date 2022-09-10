@@ -73,7 +73,7 @@ const Navbar = () => {
         onClick={handleNav}
         className={
           nav
-            ? "absolute text-black left-0 top-0 w-full bg-gray-100/90 px-4 py-y flex-col"
+            ? "absolute text-black left-0 top-0 w-full bg-gray-100/90 px-4 py-4 flex-col"
             : "absolute left-[-100%]"
         }
       >
@@ -82,12 +82,31 @@ const Navbar = () => {
             Feel<span className="text-red-600">SK</span>
           </h1>
           <li className="border-b">Home</li>
-          <li className="border-b">Locations</li>
+          <Link
+          className="p-4 cursor-pointer border-b hover:text-red-600"
+          to="locations"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}
+        >
+          Locations
+        </Link>
+          {/* <li className="border-b">Locations</li> */}
           <li className="border-b">Reviews</li>
 
           <div className="flex flex-col">
-            <button className="my-6 hover:text-black">Search</button>
-            <button className="hover:text-black">Book a tour</button>
+            {/* <button className="my-6 hover:text-black">Search</button> */}
+          <Link
+          className="bg-red-600 text-center p-3 border text-white rounded-md list-none hover:bg-red-600 cursor-pointer"
+          to="booking"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}
+        >
+          Book a tour
+        </Link>
           </div>
           <div className="flex justify-between my-6">
             <FaFacebook className="icon hover:text-black" />

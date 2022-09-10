@@ -4,7 +4,7 @@ import searchData from "./data"
 
 const Hero = () => {
   return (
-    <div className="w-full h-screen relative">
+    <div id="hero" className="w-full h-screen relative">
       <video
         className="w-full h-full object-cover"
         src={vodnoDrone}
