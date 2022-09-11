@@ -1,14 +1,21 @@
 import React from "react";
 import Comments from "../components/Comments";
+import Footer from "../components/Footer";
+
 
 const Reviews = () => {
-  return <div className="bg-white text-black">
+  return (
+    <div className="text-black bg-gray-100">
 
+        <Comments currentUserId="1" />
+      <Footer/>
+      
 
-    <Comments currentUserId="1"/>
-    
-    </div>;
-
+      
+    </div>
+  );
 };
 
 export default Reviews;
+
+

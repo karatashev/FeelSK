@@ -32,7 +32,12 @@ const Navbar = () => {
           Locations
         </Link>
 
-        <NavLink to="/reviews" className="p-4 hover:text-red-600 cursor-pointer">Reviews</NavLink>
+        <NavLink
+          to="/reviews"
+          className="p-4 hover:text-red-600 cursor-pointer"
+        >
+          Reviews
+        </NavLink>
 
         <Link
           className="p-4 cursor-pointer hover:text-red-600"
@@ -44,7 +49,6 @@ const Navbar = () => {
         >
           Social
         </Link>
-
       </ul>
       <div className="hidden md:flex">
         <Link
@@ -81,32 +85,38 @@ const Navbar = () => {
           <h1>
             Feel<span className="text-red-600">SK</span>
           </h1>
-          <li className="border-b">Home</li>
-          <Link
-          className="p-4 cursor-pointer border-b hover:text-red-600"
-          to="locations"
-          spy={true}
-          smooth={true}
-          offset={50}
-          duration={500}
-        >
-          Locations
-        </Link>
-          {/* <li className="border-b">Locations</li> */}
-          <li className="border-b">Reviews</li>
+          <li className="border-b flex flex-col justify-center items-center">
+            Home
+          </li>
+          <NavLink
+            className="p-4 cursor-pointer border-b flex flex-col justify-center items-center hover:text-red-600"
+            to="/"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            Locations
+          </NavLink>
+
+          <NavLink
+            to="/reviews"
+            className="flex flex-col justify-center items-center p-4"
+          >
+            Reviews
+          </NavLink>
 
           <div className="flex flex-col">
-            {/* <button className="my-6 hover:text-black">Search</button> */}
-          <Link
-          className="bg-red-600 text-center p-3 border text-white rounded-md list-none hover:bg-red-600 cursor-pointer"
-          to="booking"
-          spy={true}
-          smooth={true}
-          offset={50}
-          duration={500}
-        >
-          Book a tour
-        </Link>
+            <NavLink
+              className="bg-red-600 text-center p-3 mt-2 border text-white rounded-md list-none hover:bg-red-600 cursor-pointer"
+              to="/"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              Book a tour
+            </NavLink>
           </div>
           <div className="flex justify-between my-6">
             <FaFacebook className="icon hover:text-black" />

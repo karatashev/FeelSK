@@ -58,11 +58,11 @@ const Comments = ({ commentsUrl, currentUserId }) => {
   }, []);
 
   return (
-    <div className="comments">
-      <h3 className="comments-title">Comments</h3>
-      <div className="comment-form-title">Write comment</div>
-      <CommentForm submitLabel="Write" handleSubmit={addComment} />
-      <div className="comments-container">
+    <div className="pt-5 border-b-stone-500 border-b max-w-[1240px] mx-5 md:mx-5 lg:mx-auto">
+      <h3 className="text-[30px] mb-5 text-center">Travel reviews</h3>
+      <div className="text-[22px] text-center">Write a review</div>
+      <CommentForm submitLabel="Post a review" handleSubmit={addComment} />
+      <div className="mt-10 flex flex-col justify-center ">
         {rootComments.map((rootComment) => (
           <Comment
             key={rootComment.id}

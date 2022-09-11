@@ -26,6 +26,10 @@ const carouselData = [
   {
     url: 'https://images.unsplash.com/photo-1601478958665-9b4608160f64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
     id: 7,
+  },
+  {
+    url: 'https://images.pexels.com/photos/9399555/pexels-photo-9399555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    id: 8,
   }
   ]
 

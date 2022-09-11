@@ -50,7 +50,7 @@ const Footer = () => {
           <ul className="text-right lg:flex">
           <li>Contact</li>
           <li>Locations</li>
-          <li>Reviews</li>
+          <Link className="p-4" to="/reviews">Reviews</Link>
           </ul>
         </div>
       </div>

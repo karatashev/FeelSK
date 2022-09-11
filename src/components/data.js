@@ -71,6 +71,20 @@ const data = {
       desc: "",
       link: "https://en.wikipedia.org/wiki/Millennium_Cross",
     },
+    {
+      id: 10,
+      imgSrc: "",
+      title: 'Stone Bridge',
+      desc: "",
+      link: "https://en.wikipedia.org/wiki/Stone_Bridge_(Skopje)",
+    },
+    {
+      id: 11,
+      imgSrc: "",
+      title: 'Skopje Fortress(Kale)',
+      desc: "",
+      link: "https://en.wikipedia.org/wiki/Skopje_Fortress",
+    },
 
   ],
 }
