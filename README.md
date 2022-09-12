@@ -1,6 +1,9 @@
 
-
 Live demo deployed here: https://feelsk-web-app.netlify.app/
+
+<img width="1279" alt="Screenshot 2022-09-12 at 16 25 59" src="https://user-images.githubusercontent.com/95942547/189679940-fceb6a84-7bf4-4733-9f71-890bce9b3187.png">
+
+<img width="239" alt="Screenshot 2022-09-12 at 16 26 44" src="https://user-images.githubusercontent.com/95942547/189679974-1c954193-1396-45cc-94be-5a7bdf3e1226.png">
 
 
 # Getting Started with Create React App
