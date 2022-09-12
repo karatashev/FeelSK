@@ -2,7 +2,7 @@ export const getComments = async () => {
   return [
     {
       id: "1",
-      body: "I had amazing time in Skopje",
+      body: "I had an amazing time in Skopje!",
       username: "Peter",
       userId: "1",
       parentId: null,

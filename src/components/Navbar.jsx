@@ -92,7 +92,7 @@ const Navbar = () => {
             className="p-4 cursor-pointer border-b flex flex-col justify-center items-center hover:text-red-600"
             to="/"
             spy={true}
-            smooth={true}
+            smooth={true} 
             offset={50}
             duration={500}
           >
@@ -108,7 +108,7 @@ const Navbar = () => {
 
           <div className="flex flex-col">
             <NavLink
-              className="bg-red-600 text-center p-3 mt-2 border text-white rounded-md list-none hover:bg-red-600 cursor-pointer"
+              className="bg-red-600 text-center p-3 mt-2 border text-white rounded-md list-none hover:bg-red-600 hover:border-none cursor-pointer"
               to="/"
               spy={true}
               smooth={true}

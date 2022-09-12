@@ -11,8 +11,9 @@ const Hero = () => {
         autoPlay
         loop
         muted
+        playsInline
       />
-      <div className="absolute w-full h-full top-0 left-0 bg-gray-900/20"></div>
+      <div className="absolute w-full h-full top-0 left-0 bg-gray-700/10"></div>
       <div className="absolute top-0 w-full h-full flex flex-col justify-center text-center text-white p-4">
         <h1>
           The Capital of <span className="text-red-600">Macedonia</span>

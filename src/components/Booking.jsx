@@ -24,7 +24,7 @@ const Booking = () => {
     const dd = String(today.getDate() + 1).padStart(2, "0");
     const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
     const yyyy = today.getFullYear();
-    return dd + "-" + mm + "-" + yyyy;
+    return yyyy + "-" + mm + "-" + dd;
 };
 
 
@@ -33,10 +33,10 @@ const Booking = () => {
 
 
   return (
-    <div id="booking" className="max-w-[1240px] mx-auto grid lg:grid-cols-3 gap-4 px-4 py-16">
+    <div id="booking" className="max-w-[1240px] mx-auto grid lg:grid-cols-3 gap-4 px-4 py-10">
       <div className="lg:col-span-2 flex flex-col justify-evenly">
         <div>
-          <h2>Experience our city tours</h2>
+          <h2 className="text-center text-[35px]">Experience our <span className="text-red-600">CITY</span> tours</h2>
           <p className="py-4">
           With all of its perfections and flaws, Skopje is a city like no other. We grew up here, we live here, we work here.. All of our memories with the people we care the most about are created on the streets of Skopje. We are proud of the city with inexhaustible energy. The city that almost never sleeps. The wonderful squares, the biggest monument on the Balkan Peninsula, the City Park, Vodno and Matka, the Vrelo caves, the way Vardar cuts it in half, the Millenium cross, the Old town bazaar, the Kale fortress .. all of these represent a certain period and tell a different story of the capital city of the land of the sun.
           </p>
@@ -63,13 +63,13 @@ const Booking = () => {
           </div>
         </div>
       </div>
-      <div>
-        <div className="border text-center bg-gray-800 text-white">
+      <div className="border border-gray-800">
+        <div className=" text-center bg-gray-800 text-white">
           <p className="pt-2">Get and additional 10 % off</p>
           <p className="py-4">ON THE FIRST TOUR</p>
           {/* <p className="bg-gray-800 text-gray-200 py-2">Select below</p> */}
         </div>
-        <form className="w-full">
+        <form className="w-[80%] flex flex-col justify-center mx-auto">
 
 
           {/* Select Tour */}

@@ -7,6 +7,7 @@ import {
   updateComment as updateCommentApi,
   deleteComment as deleteCommentApi,
 } from "../components/api";
+import { useNavigate } from "react-router-dom";
 
 const Comments = ({ commentsUrl, currentUserId }) => {
   const [backendComments, setBackendComments] = useState([]);
@@ -41,7 +42,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
     });
   };
   const deleteComment = (commentId) => {
-    if (window.confirm("Are you sure you want to remove comment?")) {
+    if (window.confirm("Are you sure you want to remove the review?")) {
       deleteCommentApi().then(() => {
         const updatedBackendComments = backendComments.filter(
           (backendComment) => backendComment.id !== commentId
@@ -56,6 +57,12 @@ const Comments = ({ commentsUrl, currentUserId }) => {
       setBackendComments(data);
     });
   }, []);
+
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    navigate(-1);
+  };
 
   return (
     <div className="pt-5 border-b-stone-500 border-b max-w-[1240px] mx-5 md:mx-5 lg:mx-auto">
@@ -76,6 +83,9 @@ const Comments = ({ commentsUrl, currentUserId }) => {
             currentUserId={currentUserId}
           />
         ))}
+      </div>
+      <div className="flex justify-end">
+        <div onClick={goBack} className="flex text-white bg-red-600 py-2 px-2 w-[120px] border-none mb-2 cursor-pointer">{`< Homepage`}</div>
       </div>
     </div>
   );
